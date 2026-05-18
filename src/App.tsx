@@ -1,9 +1,13 @@
 import React from 'react';
 import { Header, Hero } from './components/Hero';
 import { ProblemSection, CapitalCulturalSection } from './components/Problem';
-import { WhatWeDoSection, WhatWeAreSection } from './components/Action';
-import { MethodSection, SponsorSection } from './components/MethodSponsor';
-import { ImpactSection, ValuesSection, ManifestoSection, Footer } from './components/Closing';
+import { MovementSection } from './components/Movement';
+import { MethodSection } from './components/Method';
+import { ChallengeTracksSection } from './components/ChallengeTracks';
+import { StudentValueSection } from './components/StudentValue';
+import { SponsorValueSection, SupportOptionsSection } from './components/SponsorValue';
+import { WhatWeAreSection } from './components/Action';
+import { ImpactSection, ManifestoSection, Footer } from './components/Closing';
 
 function App() {
   return (
@@ -13,12 +17,14 @@ function App() {
         <Hero />
         <ProblemSection />
         <CapitalCulturalSection />
-        <WhatWeDoSection />
-        <WhatWeAreSection />
+        <MovementSection />
         <MethodSection />
-        <SponsorSection />
+        <ChallengeTracksSection />
+        <StudentValueSection />
+        <SponsorValueSection />
+        <SupportOptionsSection />
+        <WhatWeAreSection />
         <ImpactSection />
-        <ValuesSection />
         <ManifestoSection />
       </main>
       <Footer />

@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { siteData } from '../data/content';
 import { SectionLabel } from './ui';
 
@@ -7,7 +6,7 @@ export const Header = () => (
   <header className="w-full py-6 px-8 flex justify-between items-center border-b border-brand-black/10 z-50 relative bg-brand-offwhite">
     <div className="font-serif text-2xl font-bold tracking-tight">TALENT HACK</div>
     <nav className="hidden md:flex gap-8">
-      {siteData.footer.links.map(link => (
+      {siteData.footerContent.links.map(link => (
         <a key={link} href={`#${link.toLowerCase()}`} className="text-sm uppercase tracking-widest font-sans font-semibold hover:text-brand-red transition-colors">
           {link}
         </a>
@@ -25,41 +24,44 @@ export const Hero = () => (
       TALENT HACK
     </div>
     
-    <div className="border-t border-brand-red w-full pt-4 mb-16 flex justify-between">
-      <SectionLabel className="text-brand-red">{siteData.hero.label}</SectionLabel>
+    <div className="border-t border-brand-red w-full pt-4 mb-16 flex justify-between flex-wrap gap-4">
+      <SectionLabel className="text-brand-red">TALENT HACK · SÃO PAULO · REDE PÚBLICA · TECNOLOGIA</SectionLabel>
+      <div className="flex gap-4">
+        {siteData.heroContent.labels.map((label, i) => (
+          <span key={i} className="text-xs uppercase tracking-widest border border-brand-black/20 px-2 py-1">{label}</span>
+        ))}
+      </div>
     </div>
 
     <div className="flex-1 flex flex-col justify-center max-w-5xl">
       <h1 className="font-serif text-6xl md:text-8xl lg:text-9xl leading-none text-brand-black mb-8">
-        {siteData.hero.title[0]} <br/> <span className="italic">{siteData.hero.title[1]}</span>
+        {siteData.heroContent.title[0]} <br/> <span className="italic">{siteData.heroContent.title[1]}</span>
       </h1>
       <h2 className="text-2xl md:text-4xl font-serif mb-12 max-w-2xl text-brand-black/80">
-        {siteData.hero.subtitle}
+        {siteData.heroContent.subtitle}
       </h2>
       
       <div className="flex flex-col md:flex-row gap-12 max-w-3xl mb-16">
-        <p className="text-lg md:text-xl font-sans leading-relaxed flex-1">
-          {siteData.hero.description1}
+        <p className="text-lg md:text-xl font-sans leading-relaxed font-semibold flex-1">
+          {siteData.heroContent.description1}
         </p>
-        <p className="text-lg md:text-xl font-sans leading-relaxed font-semibold flex-1 border-l-2 border-brand-red pl-6">
-          {siteData.hero.description2}
+        <p className="text-lg md:text-xl font-sans leading-relaxed flex-1 border-l-2 border-brand-red pl-6">
+          {siteData.heroContent.description2}
         </p>
       </div>
 
       <div className="flex flex-col sm:flex-row gap-6 items-start">
         <a href="#apoie" className="bg-brand-red text-white px-8 py-4 uppercase tracking-widest text-sm font-semibold hover:bg-brand-black transition-colors text-center">
-          {siteData.hero.ctaPrimary}
+          {siteData.heroContent.ctaPrimary}
         </a>
-        <a href="#manifesto" className="border border-brand-black text-brand-black px-8 py-4 uppercase tracking-widest text-sm font-semibold hover:bg-brand-black hover:text-brand-offwhite transition-colors text-center">
-          {siteData.hero.ctaSecondary}
+        <a href="#metodo" className="border border-brand-black text-brand-black px-8 py-4 uppercase tracking-widest text-sm font-semibold hover:bg-brand-black hover:text-brand-offwhite transition-colors text-center">
+          {siteData.heroContent.ctaSecondary}
         </a>
       </div>
     </div>
 
     <div className="absolute bottom-8 right-8 flex flex-col items-end gap-2 hidden lg:flex">
-      {siteData.hero.metrics.map((m, i) => (
-        <span key={i} className="text-brand-black/40 font-sans tracking-widest text-sm uppercase">{m}</span>
-      ))}
+      <span className="text-brand-black/40 font-sans tracking-widest text-sm uppercase">2026</span>
     </div>
   </section>
 );
