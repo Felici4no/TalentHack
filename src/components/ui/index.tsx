@@ -1,0 +1,27 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+
+export const SectionLabel = ({ children, className = "" }: { children: React.ReactNode, className?: string }) => (
+  <div className={`text-xs md:text-sm uppercase tracking-widest font-sans font-semibold ${className}`}>
+    {children}
+  </div>
+);
+
+export const EditorialMetric = ({ value, label }: { value: string, label: string }) => (
+  <motion.div 
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.5 }}
+    className="flex flex-col border-t border-brand-black/20 pt-4"
+  >
+    <span className="text-5xl md:text-7xl font-serif text-brand-red mb-2">{value}</span>
+    <span className="text-sm md:text-base font-sans uppercase tracking-widest text-brand-black/70 max-w-[150px]">{label}</span>
+  </motion.div>
+);
+
+export const SupportTag = ({ children }: { children: React.ReactNode }) => (
+  <div className="border border-brand-black px-4 py-2 text-xs md:text-sm uppercase tracking-widest font-sans hover:bg-brand-black hover:text-brand-offwhite transition-colors duration-300">
+    {children}
+  </div>
+);
