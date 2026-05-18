@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { motion } from 'framer-motion';
 import { siteData } from '../data/content';
 import { SectionLabel } from './ui';

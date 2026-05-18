@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { motion } from 'framer-motion';
 
 export const SectionLabel = ({ children, className = "" }: { children: React.ReactNode, className?: string }) => (

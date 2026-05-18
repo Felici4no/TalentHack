@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Header, Hero } from './components/Hero';
 import { ProblemSection, CapitalCulturalSection } from './components/Problem';
 import { MovementSection } from './components/Movement';
