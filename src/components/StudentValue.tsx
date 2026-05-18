@@ -3,7 +3,7 @@ import { siteData } from '../data/content';
 import { SectionLabel } from './ui';
 
 export const StudentValueSection = () => (
-  <section className="py-16 md:py-24 px-5 md:px-8 bg-brand-paper border-b border-brand-sand">
+  <section id="escolas" className="py-16 md:py-24 px-5 md:px-8 bg-brand-paper border-b border-brand-sand">
     <div className="max-w-7xl mx-auto">
       <SectionLabel className="mb-8 md:mb-12">Valor para o Estudante</SectionLabel>
       <h2 className="text-3xl md:text-6xl font-serif max-w-4xl mb-12 md:mb-16 leading-tight text-brand-red">

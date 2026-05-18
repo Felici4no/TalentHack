@@ -38,7 +38,7 @@ export const ManifestoSection = () => (
 );
 
 export const Footer = () => (
-  <footer className="bg-brand-black text-brand-paper py-16 md:py-24 px-5 md:px-8">
+  <footer id="contato" className="bg-brand-black text-brand-paper py-16 md:py-24 px-5 md:px-8">
     <div className="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-start gap-12 md:gap-16">
       <div className="max-w-md">
         <h2 className="text-3xl md:text-4xl font-serif mb-4 text-brand-red">{siteData.footerContent.title}</h2>
@@ -54,14 +54,14 @@ export const Footer = () => (
         <nav className="flex flex-col gap-3 md:gap-4 flex-1">
           <span className="text-[10px] md:text-xs uppercase tracking-widest text-brand-sand/40 mb-2 md:mb-4">Navegação</span>
           {siteData.footerContent.links.map(link => (
-            <a key={link} href={`#${link.toLowerCase()}`} className="font-sans text-xs md:text-sm uppercase tracking-widest hover:text-brand-red transition-colors">
+            <a key={link} href={`#${link.toLowerCase()}`} className="font-sans text-xs md:text-sm uppercase tracking-widest hover:text-brand-red transition-all duration-300">
               {link}
             </a>
           ))}
         </nav>
         
         <div className="flex flex-col gap-8 w-full sm:w-auto">
-          <a href="#apoie" className="w-full sm:w-auto bg-brand-red text-brand-paperLight px-8 py-4 uppercase tracking-widest text-sm font-semibold hover:bg-brand-redDark transition-colors text-center inline-block">
+          <a href="#apoie" className="inline-flex items-center justify-center w-full sm:w-auto bg-brand-red text-brand-paperLight px-8 py-4 uppercase tracking-widest text-sm font-semibold transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-md hover:bg-brand-redDark active:translate-y-0 text-center">
             Quero Apoiar
           </a>
         </div>

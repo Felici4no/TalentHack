@@ -3,7 +3,7 @@ import { siteData } from '../data/content';
 import { SectionLabel, SupportTag } from './ui';
 
 export const SponsorValueSection = () => (
-  <section className="py-16 md:py-24 px-5 md:px-8 bg-brand-black text-brand-paper">
+  <section id="empresas" className="py-16 md:py-24 px-5 md:px-8 bg-brand-black text-brand-paper">
     <div className="max-w-7xl mx-auto">
       <SectionLabel className="text-brand-red mb-8 md:mb-12">Valor para Patrocinadores</SectionLabel>
       <h2 className="text-3xl md:text-6xl font-serif max-w-4xl mb-6 md:mb-8 leading-tight">
@@ -62,9 +62,9 @@ export const SupportOptionsSection = () => (
             <SupportTag key={i}>{tag}</SupportTag>
           ))}
         </div>
-        <button className="w-full bg-brand-red text-brand-paperLight py-4 uppercase tracking-widest text-sm font-semibold hover:bg-brand-redDark transition-colors">
+        <a href="#contato" className="inline-flex items-center justify-center w-full bg-brand-red text-brand-paperLight py-4 uppercase tracking-widest text-sm font-semibold transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-md hover:bg-brand-redDark active:translate-y-0">
           {siteData.supportOptions.cta}
-        </button>
+        </a>
       </div>
     </div>
   </section>

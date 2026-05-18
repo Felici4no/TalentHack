@@ -15,6 +15,10 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
   html, body {
     @apply bg-brand-paper text-brand-black font-sans antialiased overflow-x-hidden;
   }
@@ -22,10 +26,26 @@
   h1, h2, h3, h4, h5, h6 {
     @apply font-serif;
   }
+
+  section {
+    scroll-margin-top: 96px;
+  }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  * {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
   }
 }

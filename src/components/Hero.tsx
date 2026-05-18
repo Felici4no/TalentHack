@@ -3,23 +3,23 @@ import { siteData } from '../data/content';
 import { SectionLabel } from './ui';
 
 export const Header = () => (
-  <header className="w-full py-4 md:py-6 px-5 md:px-8 flex justify-between items-center border-b border-brand-black/10 z-50 relative bg-brand-paper">
+  <header className="fixed top-0 left-0 w-full py-4 md:py-6 px-5 md:px-8 flex justify-between items-center border-b border-brand-black/10 z-50 bg-brand-paper shadow-sm">
     <div className="font-serif text-xl md:text-2xl font-bold tracking-tight">TALENT HACK</div>
     <nav className="hidden md:flex gap-8">
       {siteData.footerContent.links.map(link => (
-        <a key={link} href={`#${link.toLowerCase()}`} className="text-sm uppercase tracking-widest font-sans font-semibold hover:text-brand-red transition-colors">
+        <a key={link} href={`#${link.toLowerCase()}`} className="text-sm uppercase tracking-widest font-sans font-semibold hover:text-brand-red transition-all duration-300">
           {link}
         </a>
       ))}
     </nav>
-    <a href="#apoie" className="bg-brand-red text-brand-paperLight px-4 py-2 md:px-6 md:py-2 uppercase tracking-widest text-xs md:text-sm font-semibold hover:bg-brand-redDark transition-colors">
+    <a href="#apoie" className="bg-brand-red text-brand-paperLight px-4 py-2 md:px-6 md:py-2 uppercase tracking-widest text-xs md:text-sm font-semibold transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-md hover:bg-brand-redDark active:translate-y-0">
       Apoiar
     </a>
   </header>
 );
 
 export const Hero = () => (
-  <section className="relative min-h-[85vh] md:min-h-[90vh] flex flex-col pt-8 md:pt-12 overflow-hidden px-5 md:px-8">
+  <section className="relative min-h-[85vh] md:min-h-[90vh] flex flex-col pt-24 md:pt-32 overflow-hidden px-5 md:px-8">
     <div className="hidden md:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[15vw] font-serif font-bold text-brand-sand opacity-40 whitespace-nowrap pointer-events-none select-none -z-10">
       TALENT HACK
     </div>
@@ -51,10 +51,10 @@ export const Hero = () => (
       </div>
 
       <div className="flex flex-col sm:flex-row gap-4 md:gap-6 items-start pb-12 md:pb-0">
-        <a href="#apoie" className="w-full sm:w-auto bg-brand-red text-brand-paperLight px-8 py-4 uppercase tracking-widest text-sm font-semibold hover:bg-brand-redDark transition-colors text-center">
+        <a href="#apoie" className="inline-flex items-center justify-center w-full sm:w-auto bg-brand-red text-brand-paperLight px-8 py-4 uppercase tracking-widest text-sm font-semibold transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-md hover:bg-brand-redDark active:translate-y-0 text-center">
           {siteData.heroContent.ctaPrimary}
         </a>
-        <a href="#metodo" className="w-full sm:w-auto border border-brand-black text-brand-black px-8 py-4 uppercase tracking-widest text-sm font-semibold hover:bg-brand-black hover:text-brand-paperLight transition-colors text-center">
+        <a href="#metodo" className="inline-flex items-center justify-center w-full sm:w-auto border border-brand-black text-brand-black px-8 py-4 uppercase tracking-widest text-sm font-semibold transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-md hover:bg-brand-black hover:text-brand-paperLight active:translate-y-0 text-center">
           {siteData.heroContent.ctaSecondary}
         </a>
       </div>
