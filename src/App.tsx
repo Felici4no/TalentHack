@@ -11,7 +11,7 @@ import { ImpactSection, ManifestoSection, Footer } from './components/Closing';
 
 function App() {
   return (
-    <div className="min-h-screen bg-brand-offwhite font-sans text-brand-black selection:bg-brand-red selection:text-white">
+    <div className="min-h-screen bg-brand-paper font-sans text-brand-black selection:bg-brand-red selection:text-white">
       <Header />
       <main>
         <Hero />

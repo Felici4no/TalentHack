@@ -4,11 +4,11 @@ import { siteData } from '../data/content';
 import { SectionLabel } from './ui';
 
 export const MovementSection = () => (
-  <section className="py-24 px-8 border-b border-brand-black">
+  <section className="py-24 px-8 border-b border-brand-sand bg-brand-paper">
     <div className="max-w-7xl mx-auto">
       <SectionLabel className="mb-12 text-brand-red">Posicionamento</SectionLabel>
       <div className="flex flex-col lg:flex-row gap-16 mb-24">
-        <h2 className="text-4xl md:text-6xl font-serif flex-1 leading-tight">
+        <h2 className="text-4xl md:text-6xl font-serif flex-1 leading-tight text-brand-black">
           {siteData.movementContent.title}
         </h2>
         <div className="flex-1 flex flex-col gap-8 justify-center">
@@ -30,7 +30,7 @@ export const MovementSection = () => (
         ))}
       </div>
 
-      <div className="text-center pt-16 border-t border-brand-black/10">
+      <div className="text-center pt-16 border-t border-brand-sand">
         <p className="text-2xl md:text-3xl font-serif text-brand-red italic">
           "{siteData.movementContent.keyMessage}"
         </p>

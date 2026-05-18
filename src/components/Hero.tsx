@@ -3,7 +3,7 @@ import { siteData } from '../data/content';
 import { SectionLabel } from './ui';
 
 export const Header = () => (
-  <header className="w-full py-6 px-8 flex justify-between items-center border-b border-brand-black/10 z-50 relative bg-brand-offwhite">
+  <header className="w-full py-6 px-8 flex justify-between items-center border-b border-brand-black/10 z-50 relative bg-brand-paper">
     <div className="font-serif text-2xl font-bold tracking-tight">TALENT HACK</div>
     <nav className="hidden md:flex gap-8">
       {siteData.footerContent.links.map(link => (
@@ -12,7 +12,7 @@ export const Header = () => (
         </a>
       ))}
     </nav>
-    <a href="#apoie" className="bg-brand-red text-white px-6 py-2 uppercase tracking-widest text-sm font-semibold hover:bg-brand-black transition-colors">
+    <a href="#apoie" className="bg-brand-red text-brand-paperLight px-6 py-2 uppercase tracking-widest text-sm font-semibold hover:bg-brand-redDark transition-colors">
       Quero Apoiar
     </a>
   </header>
@@ -20,7 +20,7 @@ export const Header = () => (
 
 export const Hero = () => (
   <section className="relative min-h-[90vh] flex flex-col pt-12 overflow-hidden px-8">
-    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[15vw] font-serif font-bold text-brand-gray-light opacity-50 whitespace-nowrap pointer-events-none select-none -z-10">
+    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[15vw] font-serif font-bold text-brand-sand opacity-40 whitespace-nowrap pointer-events-none select-none -z-10">
       TALENT HACK
     </div>
     
@@ -51,10 +51,10 @@ export const Hero = () => (
       </div>
 
       <div className="flex flex-col sm:flex-row gap-6 items-start">
-        <a href="#apoie" className="bg-brand-red text-white px-8 py-4 uppercase tracking-widest text-sm font-semibold hover:bg-brand-black transition-colors text-center">
+        <a href="#apoie" className="bg-brand-red text-brand-paperLight px-8 py-4 uppercase tracking-widest text-sm font-semibold hover:bg-brand-redDark transition-colors text-center">
           {siteData.heroContent.ctaPrimary}
         </a>
-        <a href="#metodo" className="border border-brand-black text-brand-black px-8 py-4 uppercase tracking-widest text-sm font-semibold hover:bg-brand-black hover:text-brand-offwhite transition-colors text-center">
+        <a href="#metodo" className="border border-brand-black text-brand-black px-8 py-4 uppercase tracking-widest text-sm font-semibold hover:bg-brand-black hover:text-brand-paperLight transition-colors text-center">
           {siteData.heroContent.ctaSecondary}
         </a>
       </div>

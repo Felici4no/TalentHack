@@ -3,7 +3,7 @@ import { siteData } from '../data/content';
 import { SectionLabel } from './ui';
 
 export const MethodSection = () => (
-  <section id="metodo" className="py-24 px-8 border-b border-brand-black bg-brand-offwhite">
+  <section id="metodo" className="py-24 px-8 border-b border-brand-sand bg-brand-paperLight">
     <div className="max-w-7xl mx-auto">
       <SectionLabel className="mb-12">O Método</SectionLabel>
       <h2 className="text-4xl md:text-6xl font-serif max-w-4xl mb-6 leading-tight">
@@ -23,7 +23,7 @@ export const MethodSection = () => (
         ))}
       </div>
 
-      <div className="mt-24 pt-8 border-t border-brand-black/20 max-w-3xl">
+      <div className="mt-24 pt-8 border-t border-brand-sand max-w-3xl">
         <p className="text-2xl md:text-4xl font-serif italic text-brand-red">
           "{siteData.methodSteps.closing}"
         </p>
