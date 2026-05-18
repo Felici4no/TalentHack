@@ -1,6 +1,15 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-brand-red: #D71920;
+  --color-brand-offwhite: #F3EFE7;
+  --color-brand-black: #151515;
+  --color-brand-gray-light: #E8E1DA;
+  --color-brand-pink-soft: #F2D7D3;
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+  --tracking-widest: 0.25em;
+}
 
 @layer base {
   html, body {
